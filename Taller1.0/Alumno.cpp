@@ -18,42 +18,42 @@ Alumno::Alumno(string nombre, string rut, float notaUno, float notaDos, float no
 
 string Alumno::getNombre()
 {
-	return nombre;
+	return this->nombre;
 }
 
 string Alumno::getRut()
 {
-	return rut;
+	return this->rut;
 }
 
 float Alumno::getNotaUno()
 {
-	return notaUno;
+	return this->notaUno;
 }
 
 float Alumno::getNotaDos()
 {
-	return notaDos;
+	return this->notaDos;
 }
 
 float Alumno::getNotaTres()
 {
-	return notaTres;
+	return this->notaTres;
 }
 
 bool Alumno::getApruebaTaller()
 {
-	return apruebaTaller;
+	return this->apruebaTaller;
 }
 
 int Alumno::getParalelo()
 {
-	return paralelo;
+	return this->paralelo;
 }
 
 int Alumno::getNumLista()
 {
-	return numLista;
+	return this->numLista;
 }
 
 float Alumno::setNotaUno(float notaPruebaRec)

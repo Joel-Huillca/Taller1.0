@@ -140,11 +140,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Alumno.cpp" />
+    <ClCompile Include="Mpp.cpp" />
+    <ClCompile Include="Nodo.cpp" />
     <ClCompile Include="SistemaNotas.cpp" />
     <ClCompile Include="Taller1.0.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Alumno.h" />
+    <ClInclude Include="Mpp.h" />
+    <ClInclude Include="Nodo.h" />
     <ClInclude Include="SistemaNotas.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
