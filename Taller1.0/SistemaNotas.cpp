@@ -13,14 +13,23 @@ SistemaNotas::~SistemaNotas()
 
 void SistemaNotas::menuIniciarSesion()
 {
-	
+	string nombre;
+	cout << "Nombre: " << ends;
+	cin >> nombre;
+	//Buscar si nombre es igual la Matriz de nombres
+	//If (existe){}else {null o diferente}
+
+	string codigo;
+	cout << "Codigo: " << ends;
+	cin >> codigo;
+
 
 }
 
 void SistemaNotas::menuPrincipal()
 {
 	
-	cout << "Bienvenido" << endl;
+	cout << "Bienvenido\n" << endl;
 	menuIniciarSesion();
 	
 
@@ -51,7 +60,7 @@ bool SistemaNotas::comprobarEntradaDatosInt(string dato)
 
 int SistemaNotas::recibirDato(string texto)
 {
-	string dato;
+	string dato; 
 	bool numValido = false;
 	while (!numValido) {
 		try {
