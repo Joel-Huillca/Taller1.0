@@ -3,10 +3,11 @@
 
 #include <iostream>
 #include "SistemaNotas.h"
-
+using namespace std;
 int main()
 {
-	SistemaNotas* sistema = new SistemaNotas;
+	//SistemaNotas* sistema = new SistemaNotas;
+	cout << "magic" << endl;
 
 
 }
