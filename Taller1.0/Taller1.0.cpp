@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
 	//SistemaNotas* sistema = new SistemaNotas;
-	cout << "magicc" << endl;
+	cout << "magic" << endl;
 
 
 }
