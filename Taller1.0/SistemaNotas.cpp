@@ -4,7 +4,6 @@
 using namespace std;
 SistemaNotas::SistemaNotas()
 {
-
 }
 
 SistemaNotas::~SistemaNotas()
@@ -31,17 +30,37 @@ void SistemaNotas::menuIniciarSesion()
 void SistemaNotas::menuPrincipal()
 {
 	
-	cout << "Bienvenido\n" << endl;
+	cout << "_____.:Bienvenido:._____\n" << endl;
 	menuIniciarSesion();
 	bool salir = false;
 	while (salir == false) {
 		cout << "[1] Cargar archivos\n[2] Registrar Notas\n[3] Estadisticas\n[4] Elminar Estudiantes R.\n[5] Salir"<<endl;
 		string texto1 = "> Elija una opcion:";
 		int opcion1 = recibirDato(texto1);
-
-
-
-		salir = true;
+		switch (opcion1)
+		{
+		case 1:
+		{}
+		break;
+		case 2:
+		{}
+		break;
+		case 3:
+		{}
+		break;
+		case 4:
+		{}
+		break;
+		case 5:
+		{
+			salir = true;
+			cout << "___El sistema a finalizado___\n  Que tenga un excelente dia"<<endl;
+		}
+		break;
+		default:
+			cout <<"Intente de nuevo...\n" << endl;
+			break;
+		}//fin del Menu
 		
 
 	}
