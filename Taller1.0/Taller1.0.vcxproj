@@ -151,6 +151,9 @@
     <ClInclude Include="Nodo.h" />
     <ClInclude Include="SistemaNotas.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="estudiantes.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -45,4 +45,7 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="estudiantes.txt" />
+  </ItemGroup>
 </Project>
