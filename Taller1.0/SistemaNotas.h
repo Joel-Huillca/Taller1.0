@@ -19,6 +19,10 @@ public:
 
 	void menuPrincipal();
 
+	bool comprobarEntradaDatosInt(string dato);
+
+	int recibirDato(string texto);
+
 
 
 
