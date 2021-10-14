@@ -4,7 +4,6 @@
 using namespace std;
 SistemaNotas::SistemaNotas()
 {
-
 }
 
 SistemaNotas::~SistemaNotas()
@@ -13,16 +12,58 @@ SistemaNotas::~SistemaNotas()
 
 void SistemaNotas::menuIniciarSesion()
 {
-	
+	string nombre;
+	cout << "Nombre: ";
+	getline(cin, nombre);
+	//Buscar si nombre existe dentro de la Matriz[][]
+	//If (existe){}else {null o diferente}
+
+	string codigo;
+	cout<<  "Codigo: ";
+	getline(cin,codigo);
+	if (codigo._Equal("holi")) {
+		cout << "Ya podemos iniciar...\n" << endl;
+	}
 
 }
 
 void SistemaNotas::menuPrincipal()
 {
 	
-	cout << "Bienvenido" << endl;
+	cout << "_____.:Bienvenido:._____\n" << endl;
 	menuIniciarSesion();
-	
+	bool salir = false;
+	while (salir == false) {
+		cout << "[1] Cargar archivos\n[2] Registrar Notas\n[3] Estadisticas\n[4] Elminar Estudiantes R.\n[5] Salir"<<endl;
+		string texto1 = "> Elija una opcion:";
+		int opcion1 = recibirDato(texto1);
+		switch (opcion1)
+		{
+		case 1:
+		{}
+		break;
+		case 2:
+		{}
+		break;
+		case 3:
+		{}
+		break;
+		case 4:
+		{}
+		break;
+		case 5:
+		{
+			salir = true;
+			cout << "___El sistema a finalizado___\n  Que tenga un excelente dia"<<endl;
+		}
+		break;
+		default:
+			cout <<"Intente de nuevo...\n" << endl;
+			break;
+		}//fin del Menu
+		
+
+	}
 
 }
 
@@ -51,7 +92,7 @@ bool SistemaNotas::comprobarEntradaDatosInt(string dato)
 
 int SistemaNotas::recibirDato(string texto)
 {
-	string dato;
+	string dato; 
 	bool numValido = false;
 	while (!numValido) {
 		try {
