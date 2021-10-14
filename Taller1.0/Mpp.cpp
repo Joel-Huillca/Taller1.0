@@ -8,8 +8,9 @@ Mpp::Mpp(int ancho, int largo)
 {
 	this->ancho = ancho;
 	this->largo = largo;
-	this->ACOL = new Nodo[ancho + 1];
-	this->AROW = new Nodo[largo + 1];
+	ACOL = new Nodo[ancho + 1];
+	AROW = new Nodo[largo + 1];
+	
 
 }
 

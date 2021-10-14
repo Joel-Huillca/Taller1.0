@@ -109,3 +109,42 @@ int SistemaNotas::recibirDato(string texto)
 	}
 	return stoi(dato);
 }
+
+void SistemaNotas::leerArchivo()
+{
+	ifstream archivo("estudiantes.txt");
+	string linea = "";
+
+	while (getline(archivo, linea)) {
+		string nombre;
+		string rut;
+		string notaUnoAux;
+		int notaUno;
+		string notaDosAux;
+		int notaDos;
+		string notaTresAux;
+		int notaTres;
+		string apruebaTaller;
+		string paralelo;
+		string numLista;
+
+		stringstream s(linea);
+		getline(s, nombre, ',');
+		getline(s, rut, ',');
+		getline(s, notaUnoAux, ',');
+		getline(s, notaDosAux, ',');
+		getline(s, notaTresAux, ',');
+		getline(s, apruebaTaller, ',');
+		getline(s, paralelo, ',');
+		getline(s, numLista, ',');
+
+		notaUno = stoi(notaUnoAux);
+		notaDos = stoi(notaDosAux);
+		notaTres = stoi(notaTresAux);
+
+
+
+	}
+
+	archivo.close();
+}

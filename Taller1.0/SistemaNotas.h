@@ -4,7 +4,8 @@
 #include <iostream>
 #include <stdlib.h>
 #include <stdio.h>
-
+#include <sstream>
+#include <fstream>
 #include <string>
 using namespace std;
 
@@ -22,6 +23,8 @@ public:
 	bool comprobarEntradaDatosInt(string dato);
 
 	int recibirDato(string texto);
+
+	void leerArchivo();
 
 
 
