@@ -14,14 +14,17 @@ SistemaNotas::~SistemaNotas()
 void SistemaNotas::menuIniciarSesion()
 {
 	string nombre;
-	cout << "Nombre: " << ends;
-	cin >> nombre;
+	cout << "Nombre: ";
+	getline(cin, nombre);
 	//Buscar si nombre es igual la Matriz de nombres
 	//If (existe){}else {null o diferente}
 
 	string codigo;
-	cout << "Codigo: " << ends;
-	cin >> codigo;
+	cout<<  "Codigo: ";
+	getline(cin,codigo);
+	if (codigo._Equal("holi")) {
+		cout << "Ya podemos iniciar...\n" << endl;
+	}
 
 
 }
