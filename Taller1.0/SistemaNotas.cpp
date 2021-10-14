@@ -56,14 +56,18 @@ void SistemaNotas::menuPrincipal()
 			switch (opcion2)
 			{
 			case 1:
-			{}
+			{cout << "11111111111111";}
 			break;
 			case 2:
-			{}
+			{cout << "222222222222"; }
 			break; 
 			case 3:
-			{}
+			{cout << "333333333333"; }
 			break;
+
+			default:
+				cout << "La opcion ingresada no es valida, intente de nuevo...\n" << endl;
+				break;
 			}//Fin del menu_2
 
 		}
@@ -78,7 +82,7 @@ void SistemaNotas::menuPrincipal()
 		}
 		break;
 		default:
-			cout <<"Intente de nuevo...\n" << endl;
+			cout <<"La opcion ingresada no es valida, intente de nuevo...\n" << endl;
 			break;
 		}//fin del Menu
 		
