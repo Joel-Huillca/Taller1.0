@@ -6,9 +6,9 @@ Mpp::Mpp()
 
 Mpp::Mpp(int ancho, int largo)
 {
-	this->ancho = ancho;
+	this->ancho = 8;
 	this->largo = largo;
-	ACOL = new Nodo[ancho + 1];
+	ACOL = new Nodo[ancho ];
 	AROW = new Nodo[largo + 1];
 	
 

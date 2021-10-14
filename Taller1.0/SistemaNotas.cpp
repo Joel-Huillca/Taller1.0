@@ -142,11 +142,11 @@ void SistemaNotas::leerArchivo()
 		string nombre;
 		string rut;
 		string notaUnoAux;
-		int notaUno;
+		float notaUno;
 		string notaDosAux;
-		int notaDos;
+		float notaDos;
 		string notaTresAux;
-		int notaTres;
+		float notaTres;
 		string apruebaTaller;
 		string paralelo;
 		string numLista;
