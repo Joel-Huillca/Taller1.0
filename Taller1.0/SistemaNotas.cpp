@@ -19,12 +19,11 @@ void SistemaNotas::menuIniciarSesion()
 	//If (existe){}else {null o diferente}
 
 	string codigo;
-	cout<<  "Codigo: ";
+	cout<<  "Codigo:";
 	getline(cin,codigo);
 	if (codigo._Equal("holi")) {
 		cout << "Ya podemos iniciar...\n" << endl;
 	}
-
 }
 
 void SistemaNotas::menuPrincipal()
@@ -47,7 +46,7 @@ void SistemaNotas::menuPrincipal()
 		break;
 		case 3:
 		{
-			cout << "       |ESTADISTICAS|"<<endl;
+			cout << "          |ESTADISTICAS|"<<endl;
 			cout << "[1] Cantidad de estudiantes que esten reprobando el Taller por paralelo"<<endl;
 			cout << "[2] % Total de estudiantes que estan reprobando el Curso" << endl;
 			cout << "[3] Promedio final de catedras por cada estudiante " << endl;
