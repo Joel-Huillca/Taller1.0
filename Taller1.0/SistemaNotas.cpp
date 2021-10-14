@@ -46,7 +46,27 @@ void SistemaNotas::menuPrincipal()
 		{}
 		break;
 		case 3:
-		{}
+		{
+			cout << "       |ESTADISTICAS|"<<endl;
+			cout << "[1] Cantidad de estudiantes que esten reprobando el Taller por paralelo"<<endl;
+			cout << "[2] % Total de estudiantes que estan reprobando el Curso" << endl;
+			cout << "[3] Promedio final de catedras por cada estudiante " << endl;
+			string texto2 = "> Elija una opcion:";
+			int opcion2 = recibirDato(texto2);
+			switch (opcion2)
+			{
+			case 1:
+			{}
+			break;
+			case 2:
+			{}
+			break; 
+			case 3:
+			{}
+			break;
+			}//Fin del menu_2
+
+		}
 		break;
 		case 4:
 		{}
