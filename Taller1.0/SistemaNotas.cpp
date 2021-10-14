@@ -19,12 +19,11 @@ void SistemaNotas::menuIniciarSesion()
 	//If (existe){}else {null o diferente}
 
 	string codigo;
-	cout<<  "Codigo: ";
+	cout<<  "Codigo:";
 	getline(cin,codigo);
 	if (codigo._Equal("holi")) {
 		cout << "Ya podemos iniciar...\n" << endl;
 	}
-
 }
 
 void SistemaNotas::menuPrincipal()
@@ -46,7 +45,31 @@ void SistemaNotas::menuPrincipal()
 		{}
 		break;
 		case 3:
-		{}
+		{
+			cout << "          |ESTADISTICAS|"<<endl;
+			cout << "[1] Cantidad de estudiantes que esten reprobando el Taller por paralelo"<<endl;
+			cout << "[2] % Total de estudiantes que estan reprobando el Curso" << endl;
+			cout << "[3] Promedio final de catedras por cada estudiante " << endl;
+			string texto2 = "> Elija una opcion:";
+			int opcion2 = recibirDato(texto2);
+			switch (opcion2)
+			{
+			case 1:
+			{cout << "11111111111111";}
+			break;
+			case 2:
+			{cout << "222222222222"; }
+			break; 
+			case 3:
+			{cout << "333333333333"; }
+			break;
+
+			default:
+				cout << "La opcion ingresada no es valida, intente de nuevo...\n" << endl;
+				break;
+			}//Fin del menu_2
+
+		}
 		break;
 		case 4:
 		{}
@@ -58,7 +81,7 @@ void SistemaNotas::menuPrincipal()
 		}
 		break;
 		default:
-			cout <<"Intente de nuevo...\n" << endl;
+			cout <<"La opcion ingresada no es valida, intente de nuevo...\n" << endl;
 			break;
 		}//fin del Menu
 		
