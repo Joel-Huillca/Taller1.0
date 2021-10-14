@@ -1,15 +1,22 @@
+
 #pragma once
+
+
+#include <string>
+using namespace std;
+
 class SistemaNotas
 {
+public:
 	SistemaNotas();
 
 	~SistemaNotas();
 
 	void menuIniciarSesion();
 
-	void menuPrincipal(); 
+	void menuPrincipal();
 
-	//
+
 
 
 
