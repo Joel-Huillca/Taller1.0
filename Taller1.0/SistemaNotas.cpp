@@ -141,31 +141,60 @@ void SistemaNotas::leerArchivo()
 	while (getline(archivo, linea)) {
 		string nombre;
 		string rut;
+
 		string notaUnoAux;
 		float notaUno;
+
 		string notaDosAux;
 		float notaDos;
+
 		string notaTresAux;
 		float notaTres;
-		string apruebaTaller;
-		string paralelo;
-		string numLista;
+
+		string apruebaTallerAux;
+		bool apruebaTaller;      //--
+
+		string paraleloAux;
+		int paralelo;
+
+		string numListaAux;
+		int numLista;
 
 		stringstream s(linea);
 		getline(s, nombre, ',');
 		getline(s, rut, ',');
+		rut.erase(remove(rut.begin(), rut.end(), ' '), rut.end() );
+
 		getline(s, notaUnoAux, ',');
 		getline(s, notaDosAux, ',');
 		getline(s, notaTresAux, ',');
-		getline(s, apruebaTaller, ',');
-		getline(s, paralelo, ',');
-		getline(s, numLista, ',');
+		getline(s, apruebaTallerAux, ',');
+
+		apruebaTallerAux.erase(remove(apruebaTallerAux.begin(), apruebaTallerAux.end(), ' '), apruebaTallerAux.end());
+
+		getline(s, paraleloAux, ',');
+		getline(s, numListaAux, ',');
 
 		notaUno = stoi(notaUnoAux);
 		notaDos = stoi(notaDosAux);
 		notaTres = stoi(notaTresAux);
 
+		transform(nombre.begin(), nombre.end(), nombre.begin(), :: toupper);
 
+		if (apruebaTallerAux == "verdadero"){
+			apruebaTaller = true;
+		}
+		else {
+			apruebaTaller = false;
+		}
+		
+		Alumno* alumno = new Alumno(nombre, rut, notaUno, notaDos, notaTres, apruebaTaller, paralelo, numLista);
+		
+		bool agregar = this->mpp->agregar(alumno,paralelo,numLista);
+		if (agregar = true)
+		{
+			cout << alumno->getNombre() << endl;
+		}
 
 	}
 
