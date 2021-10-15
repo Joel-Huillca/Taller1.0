@@ -63,7 +63,7 @@ void SistemaNotas::menuPrincipal()
 			}
 			else
 			{
-				cout << "Favor de '[1] Cargar archivos'\n";
+				cout << "Favor de '[1] Cargar archivos'\n\n";
 			}
 
 		}
@@ -81,13 +81,13 @@ void SistemaNotas::menuPrincipal()
 				switch (opcion2)
 				{
 				case 1:
-				{cout << "11111111111111"; }
+				{cout << "11111111111111\n"; }
 				break;
 				case 2:
-				{cout << "222222222222"; }
+				{cout << "222222222222\n"; }
 				break;
 				case 3:
-				{cout << "333333333333"; }
+				{cout << "333333333333\n"; }
 				break;
 
 				default:
@@ -97,7 +97,7 @@ void SistemaNotas::menuPrincipal()
 			}
 			else
 			{
-				cout << "Favor de '[1] Cargar archivos'\n";
+				cout << "Favor de '[1] Cargar archivos'\n\n";
 			}
 
 		}
@@ -118,7 +118,6 @@ void SistemaNotas::menuPrincipal()
 			cout <<"La opcion ingresada no es valida, intente de nuevo...\n" << endl;
 			break;
 		}//fin del Menu
-		
 
 	}
 
