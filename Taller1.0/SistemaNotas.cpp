@@ -10,11 +10,45 @@ SistemaNotas::~SistemaNotas()
 {
 }
 
+void SistemaNotas::registrarNota()
+{
+	
+	cout <<"Favor de ingresar el RUT: ";
+	string rut;
+	getline(cin,rut);
+
+	Nodo* rutAux = mpp->buscar(rut);
+	if (rutAux != nullptr)
+	{
+		cout << "Ingrese la Nota: ";
+		string notaAux;
+		float notaPruebaRec;
+		getline(cin, notaAux);
+		try {
+			notaPruebaRec = stof(notaAux);
+		} catch (const std::exception&) {
+			cout << "Favor de ingresar correctamente\n";
+		}
+
+
+	}
+}
+
 void SistemaNotas::menuIniciarSesion()
 {
+	//Alumno* alumno = new Alumno(nombre, rut, notaUno, notaDos, notaTres, apruebaTaller, paralelo, numLista);
+	//cout << alumno->getNombre() << " " << alumno->getRut()<< endl; //comprobacion de lectura
+
+
+
 	string nombre;
 	cout << "Nombre: ";
 	getline(cin, nombre);
+	/*if (nombre._Equal())
+	{
+
+	}*/
+
 	//Buscar si nombre existe dentro de la Matriz[][]
 	//If (existe){}else {null o diferente}
 
@@ -48,6 +82,7 @@ void SistemaNotas::menuPrincipal()
 			if (lecturaArch == false)
 			{
 				leerArchivo();
+				cout << "Se a cargado el archivo al sistema \n\n";
 				lecturaArch = true;
 			}
 			else {
@@ -60,7 +95,7 @@ void SistemaNotas::menuPrincipal()
 		{
 			if (lecturaArch == true)
 			{
-				cout << "2222222222222\n";
+				registrarNota();
 			}
 			else
 			{
@@ -122,8 +157,73 @@ void SistemaNotas::menuPrincipal()
 		
 
 	}
-
 }
+
+void SistemaNotas::leerArchivo()
+{
+	ifstream archivo("estudiantes.txt");
+	string linea = "";
+
+	while (getline(archivo, linea)) {
+		
+		string nombre;
+		string rut;
+		string notaUnoAux;
+		float notaUno;
+		string notaDosAux;
+		float notaDos;
+		string notaTresAux;
+		float notaTres;
+		string apruebaTallerAux;
+		bool apruebaTaller;      
+		string paraleloAux;
+		int paralelo;
+		string numListaAux;
+		int numLista;
+
+		stringstream s(linea);
+		getline(s, nombre, ',');
+		getline(s, rut, ',');
+		rut.erase(remove(rut.begin(), rut.end(), ' '), rut.end() );
+
+		getline(s, notaUnoAux, ',');
+		getline(s, notaDosAux, ',');
+		getline(s, notaTresAux, ',');
+		getline(s, apruebaTallerAux, ',');
+		apruebaTallerAux.erase(remove(apruebaTallerAux.begin(), apruebaTallerAux.end(), ' '), apruebaTallerAux.end());
+
+		getline(s, paraleloAux, ',');
+		getline(s, numListaAux, ',');
+
+		notaUno = stof(notaUnoAux);
+		notaDos = stof(notaDosAux);
+		notaTres = stof(notaTresAux);
+		paralelo = stoi(paraleloAux);
+		numLista = stoi(numListaAux);
+
+		transform(nombre.begin(), nombre.end(), nombre.begin(), :: toupper);
+
+		if (apruebaTallerAux == "verdadero"){
+			apruebaTaller = true;
+		}
+		else {
+			apruebaTaller = false;
+		}
+		
+		Alumno* alumno = new Alumno(nombre, rut, notaUno, notaDos, notaTres, apruebaTaller, paralelo, numLista);
+		//cout << alumno->getNombre() << " " << alumno->getRut()<< endl; //comprobacion de lectura
+
+
+		bool resp = this->mpp->agregar(alumno,paralelo,numLista);
+
+		if (resp == true) {
+			cout << alumno->getNombre() << endl;
+		}
+	}
+
+	archivo.close();
+	
+}// Lectura de arch
 
 bool SistemaNotas::comprobarEntradaDatosInt(string dato)
 {
@@ -168,93 +268,3 @@ int SistemaNotas::recibirDato(string texto)
 	return stoi(dato);
 }
 
-void SistemaNotas::leerArchivo()
-{
-	ifstream archivo("estudiantes.txt");
-	string linea = "";
-
-	while (getline(archivo, linea)) {
-		string nombre;
-		string rut;
-
-		string notaUnoAux;
-		float notaUno;
-
-		string notaDosAux;
-		float notaDos;
-
-		string notaTresAux;
-		float notaTres;
-
-		string apruebaTallerAux;
-		bool apruebaTaller;      
-
-		string paraleloAux;
-		int paralelo;
-
-		string numListaAux;
-		int numLista;
-
-		stringstream s(linea);
-		getline(s, nombre, ',');
-		getline(s, rut, ',');
-		rut.erase(remove(rut.begin(), rut.end(), ' '), rut.end() );
-
-		getline(s, notaUnoAux, ',');
-		getline(s, notaDosAux, ',');
-		getline(s, notaTresAux, ',');
-		getline(s, apruebaTallerAux, ',');
-
-		apruebaTallerAux.erase(remove(apruebaTallerAux.begin(), apruebaTallerAux.end(), ' '), apruebaTallerAux.end());
-
-		getline(s, paraleloAux, ',');
-		getline(s, numListaAux, ',');
-
-		notaUno = stof(notaUnoAux);
-		notaDos = stof(notaDosAux);
-		notaTres = stof(notaTresAux);
-		paralelo = stoi(paraleloAux);
-		numLista = stoi(numListaAux);
-
-		transform(nombre.begin(), nombre.end(), nombre.begin(), :: toupper);
-
-		if (apruebaTallerAux == "verdadero"){
-			apruebaTaller = true;
-		}
-		else {
-			apruebaTaller = false;
-		}
-		
-		Alumno* alumno = new Alumno(nombre, rut, notaUno, notaDos, notaTres, apruebaTaller, paralelo, numLista);
-		
-		bool resp = this->mpp->agregar(alumno,paralelo,numLista);
-
-		if (resp == true)
-		{
-			cout << alumno->getNombre() << endl;
-		}
-
-	}
-
-	archivo.close();
-	//imprimir
-	for (int i = 1; i <= largo; i++) {
-		string fila;
-		Nodo* auxiliar = AROW[i].getLeft();
-		int espacios = ancho - auxiliar->getColumna();
-		while (true)
-		{
-			for (int j = 0; j < espacios; j++) {
-				fila = "0" + fila;
-			}
-			if (auxiliar->getColumna == 0)break;
-			stringstream s1;
-			s1 << to_string(auxiliar->getAlumno()) << " ";
-			fila = s1.str() + fila;
-			espacios = auxiliar->getColumna() - auxiliar->getLeft()->getColumna() - 1;
-			auxiliar = auxiliar->getLeft();
-		}
-		cout << fila << endl;
-	}
-
-}// Lectura de arch
