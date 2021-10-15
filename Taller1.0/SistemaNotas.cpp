@@ -43,36 +43,63 @@ void SistemaNotas::menuPrincipal()
 		switch (opcion1)
 		{
 		case 1:
-		{}
+		{
+
+			if (lecturaArch == false)
+			{
+				leerArchivo();
+				lecturaArch = true;
+			}
+			else {
+				cout << "Ya tiene cargada la informacion al sistema \n\n";
+			}
+		}
 		break;
 
 		case 2:
-		{}
+		{
+			if (lecturaArch == true)
+			{
+				cout << "2222222222222\n";
+			}
+			else
+			{
+				cout << "Favor de '[1] Cargar archivos'\n";
+			}
+
+		}
 		break;
 		case 3:
 		{
-			cout << "          |ESTADISTICAS|"<<endl;
-			cout << "[1] Cantidad de estudiantes que esten reprobando el Taller por paralelo"<<endl;
-			cout << "[2] % Total de estudiantes que estan reprobando el Curso" << endl;
-			cout << "[3] Promedio final de catedras por cada estudiante " << endl;
-			string texto2 = "> Elija una opcion:";
-			int opcion2 = recibirDato(texto2);
-			switch (opcion2)
+			if (lecturaArch == true)
 			{
-			case 1:
-			{cout << "11111111111111";}
-			break;
-			case 2:
-			{cout << "222222222222"; }
-			break; 
-			case 3:
-			{cout << "333333333333"; }
-			break;
-
-			default:
-				cout << "La opcion ingresada no es valida, intente de nuevo...\n" << endl;
+				cout << "          |ESTADISTICAS|" << endl;
+				cout << "[1] Cantidad de estudiantes que esten reprobando el Taller por paralelo" << endl;
+				cout << "[2] % Total de estudiantes que estan reprobando el Curso" << endl;
+				cout << "[3] Promedio final de catedras por cada estudiante " << endl;
+				string texto2 = "> Elija una opcion:";
+				int opcion2 = recibirDato(texto2);
+				switch (opcion2)
+				{
+				case 1:
+				{cout << "11111111111111"; }
 				break;
-			}//Fin del menu_2
+				case 2:
+				{cout << "222222222222"; }
+				break;
+				case 3:
+				{cout << "333333333333"; }
+				break;
+
+				default:
+					cout << "La opcion ingresada no es valida, intente de nuevo...\n" << endl;
+					break;
+				}//Fin del menu_2
+			}
+			else
+			{
+				cout << "Favor de '[1] Cargar archivos'\n";
+			}
 
 		}
 		break;
@@ -229,4 +256,5 @@ void SistemaNotas::leerArchivo()
 		}
 		cout << fila << endl;
 	}
-}
+
+}// Lectura de arch
