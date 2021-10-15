@@ -28,13 +28,6 @@ public:
 
 	void registrarNota();
 
-	void cantEstudiantes_R();
-
-	void porcertanjeEstudiante_R();
-
-	void promedioFinal_C();
-
-	void filtarMatriz();
 
 	void menuIniciarSesion();
 

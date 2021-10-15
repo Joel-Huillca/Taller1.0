@@ -12,23 +12,26 @@ SistemaNotas::~SistemaNotas()
 
 void SistemaNotas::registrarNota()
 {
+	
+	cout <<"Favor de ingresar el RUT: ";
+	string rut;
+	getline(cin,rut);
 
-}
+	Nodo* rutAux = mpp->buscar(rut);
+	if (rutAux != nullptr)
+	{
+		cout << "Ingrese la Nota: ";
+		string notaAux;
+		float notaPruebaRec;
+		getline(cin, notaAux);
+		try {
+			notaPruebaRec = stof(notaAux);
+		} catch (const std::exception&) {
+			cout << "Favor de ingresar correctamente\n";
+		}
 
-void SistemaNotas::cantEstudiantes_R()
-{
-}
 
-void SistemaNotas::porcertanjeEstudiante_R()
-{
-}
-
-void SistemaNotas::promedioFinal_C()
-{
-}
-
-void SistemaNotas::filtarMatriz()
-{
+	}
 }
 
 void SistemaNotas::menuIniciarSesion()
@@ -75,6 +78,7 @@ void SistemaNotas::menuPrincipal()
 		{
 		case 1:
 		{
+
 			if (lecturaArch == false)
 			{
 				leerArchivo();
@@ -113,9 +117,7 @@ void SistemaNotas::menuPrincipal()
 				switch (opcion2)
 				{
 				case 1:
-				{cout << "11111111111111\n";
-					//int cantEstR = cantEstudiantes_R();
-				}
+				{cout << "11111111111111"; }
 				break;
 				case 2:
 				{cout << "222222222222"; }
