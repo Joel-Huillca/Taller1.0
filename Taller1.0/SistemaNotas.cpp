@@ -235,7 +235,7 @@ void SistemaNotas::leerArchivo()
 		}
 
 	}
-	leerArch = true;
+
 	archivo.close();
 	//imprimir
 	for (int i = 1; i <= largo; i++) {
