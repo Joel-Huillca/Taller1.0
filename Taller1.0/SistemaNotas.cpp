@@ -40,65 +40,39 @@ void SistemaNotas::menuPrincipal()
 		cout << "[1] Cargar archivos\n[2] Registrar Notas\n[3] Estadisticas\n[4] Elminar Estudiantes R.\n[5] Salir\n";
 		string texto1 = "> Elija una opcion:";
 		int opcion1 = recibirDato(texto1);
-		switch (opcion1) {
-		
-		case 1: {
-
-			if (lecturaArch == false)
-			{
-				leerArchivo();
-				lecturaArch = true;
-			}
-			else {
-				cout << "Ya tiene cargada la informacion al sistema \n\n";
-			}
-		}
+		switch (opcion1)
+		{
+		case 1:
+		{}
 		break;
 
 		case 2:
-		{
-			if (lecturaArch == true)
-			{
-				cout << "2222222222222\n";
-			}
-			else
-			{
-				cout << "Favor de '[1] Cargar archivos'\n\n";
-			}
-
-		}
+		{}
 		break;
 		case 3:
 		{
-			if (lecturaArch == true)
+			cout << "          |ESTADISTICAS|"<<endl;
+			cout << "[1] Cantidad de estudiantes que esten reprobando el Taller por paralelo"<<endl;
+			cout << "[2] % Total de estudiantes que estan reprobando el Curso" << endl;
+			cout << "[3] Promedio final de catedras por cada estudiante " << endl;
+			string texto2 = "> Elija una opcion:";
+			int opcion2 = recibirDato(texto2);
+			switch (opcion2)
 			{
-				cout << "          |ESTADISTICAS|" << endl;
-				cout << "[1] Cantidad de estudiantes que esten reprobando el Taller por paralelo" << endl;
-				cout << "[2] % Total de estudiantes que estan reprobando el Curso" << endl;
-				cout << "[3] Promedio final de catedras por cada estudiante " << endl;
-				string texto2 = "> Elija una opcion:";
-				int opcion2 = recibirDato(texto2);
-				switch (opcion2)
-				{
-				case 1:
-				{cout << "11111111111111\n"; }
-				break;
-				case 2:
-				{cout << "222222222222\n"; }
-				break;
-				case 3:
-				{cout << "333333333333\n"; }
-				break;
+			case 1:
+			{cout << "11111111111111";}
+			break;
+			case 2:
+			{cout << "222222222222"; }
+			break; 
+			case 3:
+			{cout << "333333333333"; }
+			break;
 
-				default:
-					cout << "La opcion ingresada no es valida, intente de nuevo...\n" << endl;
-					break;
-				}//Fin del menu_2
-			}
-			else
-			{
-				cout << "Favor de '[1] Cargar archivos'\n\n";
-			}
+			default:
+				cout << "La opcion ingresada no es valida, intente de nuevo...\n" << endl;
+				break;
+			}//Fin del menu_2
 
 		}
 		break;
@@ -234,6 +208,25 @@ void SistemaNotas::leerArchivo()
 		}
 
 	}
-
+	leerArch = true;
 	archivo.close();
+	//imprimir
+	for (int i = 1; i <= largo; i++) {
+		string fila;
+		Nodo* auxiliar = AROW[i].getLeft();
+		int espacios = ancho - auxiliar->getColumna();
+		while (true)
+		{
+			for (int j = 0; j < espacios; j++) {
+				fila = "0" + fila;
+			}
+			if (auxiliar->getColumna == 0)break;
+			stringstream s1;
+			s1 << to_string(auxiliar->getAlumno()) << " ";
+			fila = s1.str() + fila;
+			espacios = auxiliar->getColumna() - auxiliar->getLeft()->getColumna() - 1;
+			auxiliar = auxiliar->getLeft();
+		}
+		cout << fila << endl;
+	}
 }
