@@ -176,9 +176,9 @@ void SistemaNotas::leerArchivo()
 		getline(s, paraleloAux, ',');
 		getline(s, numListaAux, ',');
 
-		notaUno = stoi(notaUnoAux);
-		notaDos = stoi(notaDosAux);
-		notaTres = stoi(notaTresAux);
+		notaUno = stof(notaUnoAux);
+		notaDos = stof(notaDosAux);
+		notaTres = stof(notaTresAux);
 		paralelo = stoi(paraleloAux);
 		numLista = stoi(numListaAux);
 

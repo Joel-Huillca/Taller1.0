@@ -1,17 +1,9 @@
 
 #pragma once
-
 #include "Mpp.h"
 #include "Nodo.h"
 #include "Alumno.h"
-
-
-#include "Mpp.h"
-#include "Nodo.h"
-#include "Alumno.h"
-
 #include <algorithm>
-
 #include <iostream>
 #include <stdlib.h>
 #include <stdio.h>
