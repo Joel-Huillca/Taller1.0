@@ -210,5 +210,22 @@ void SistemaNotas::leerArchivo()
 	leerArch = true;
 	archivo.close();
 	//imprimir
-
+	for (int i = 1; i <= largo; i++) {
+		string fila;
+		Nodo* auxiliar = AROW[i].getLeft();
+		int espacios = ancho - auxiliar->getColumna();
+		while (true)
+		{
+			for (int j = 0; j < espacios; j++) {
+				fila = "0" + fila;
+			}
+			if (auxiliar->getColumna == 0)break;
+			stringstream s1;
+			s1 << to_string(auxiliar->getAlumno()) << " ";
+			fila = s1.str() + fila;
+			espacios = auxiliar->getColumna() - auxiliar->getLeft()->getColumna() - 1;
+			auxiliar = auxiliar->getLeft();
+		}
+		cout << fila << endl;
+	}
 }
