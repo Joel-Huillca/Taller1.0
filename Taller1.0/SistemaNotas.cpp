@@ -118,6 +118,7 @@ void SistemaNotas::menuPrincipal()
 			cout <<"La opcion ingresada no es valida, intente de nuevo...\n" << endl;
 			break;
 		}//fin del Menu
+		
 
 	}
 
