@@ -9,10 +9,10 @@ private:
 	int fila;
 	int columna;
 public:
-	//constructores
+	//Constructores
 	Nodo();
 	Nodo(Alumno* alumno, int fila, int columna);
-	Nodo(int fila, int columna);
+	Nodo(int fila, int columna);// Es para el AROW y el ACOL
 
 	//gets y sets
 	Nodo* getUp();
@@ -27,7 +27,7 @@ public:
 	void setFila(int fila);
 	void setColumna(int columna);
 	
-	//destructor
+	//Destructor
 	~Nodo();
 };
 
