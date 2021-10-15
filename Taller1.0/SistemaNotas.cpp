@@ -193,12 +193,9 @@ void SistemaNotas::leerArchivo()
 		
 		Alumno* alumno = new Alumno(nombre, rut, notaUno, notaDos, notaTres, apruebaTaller, paralelo, numLista);
 		
-		
-		//bool resp = this->mpp->agregar(alumno,paralelo,numLista);
-		bool resp = this->mpp->agregar(alumno,columna, fila);
+		bool resp = this->mpp->agregar(alumno,paralelo,numLista);
 
-
-		if (resp = true)
+		if (resp == true)
 		{
 			cout << alumno->getNombre() << endl;
 		}

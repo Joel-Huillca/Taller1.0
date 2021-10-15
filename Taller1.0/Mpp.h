@@ -16,14 +16,13 @@ private:
 	Nodo* AROW; //Vectoe de Nodos Filas
 
 public:
-	//constructores
+	//Constructores
 	Mpp();
 	Mpp(int ancho, int largo);
 
 
-	//metodos
-	//bool agregar(Alumno* alumno, int columna, int fila);
-	void agregar(Alumno* alumno, int paralelo, int numLista);
+	//Metodos
+	bool agregar(Alumno* alumno, int columna, int fila);
 	Nodo* buscar(string rut);
 	
 

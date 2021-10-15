@@ -23,18 +23,19 @@ Mpp::Mpp(int ancho, int largo)
 	}
 }
 
-/*bool Mpp::agregar(Alumno* alumno, int columna, int fila)
-{//Los axiliares se ocupan para moverse 
+bool Mpp::agregar(Alumno* alumno, int columna, int fila)
+{	//Los axiliares se ocupan para moverse 
 
 	//Buscar por fila
 	Nodo* nodo = new Nodo(alumno, columna, fila);
 	Nodo* aux = &AROW[fila];
 	Nodo* buscarAlumno = buscar(nodo->getAlumno()->getRut());
 
-	if (buscarAlumno != nullptr){
+	if (buscarAlumno != nullptr) {
 		return false;
-	}else{
-		while (aux->getLeft()->getColumna()>0      &&      aux->getLeft()->getColumna()>columna) {
+	}
+	else {
+		while (aux->getLeft()->getColumna() > 0 && aux->getLeft()->getColumna() > columna) {
 			if (aux->getLeft()->getColumna() == columna)
 			{
 				return false;
@@ -43,29 +44,21 @@ Mpp::Mpp(int ancho, int largo)
 			aux = aux->getLeft();
 		}
 
-		Nodo* Mpp::buscar(string rut)
-		{
-			return nullptr;
-		}
-		void Mpp::agregar(Alumno* alumno, int paralelo, int numLista)
-		{
-		}
-	}
-	nodo->setLeft(aux->getLeft());
-	aux->setLeft(nodo);
+		nodo->setLeft(aux->getLeft());
+		aux->setLeft(nodo);
 
-	//Buscar por Columna
-	Nodo* aux2 = &ACOL[columna];
+		//Buscar por Columna
+		Nodo* aux2 = &ACOL[columna];
 
-	while (aux2->getUp()->getFila() > 0 && aux2->getUp()->getFila() > columna) 
-	{
-		aux2 = aux2->getUp();
+		while (aux2->getUp()->getFila() > 0 && aux2->getUp()->getFila() > columna)
+		{
+			aux2 = aux2->getUp();
+		}
+		nodo->setUp(aux2->getUp());
+		aux2->setUp(nodo);
+		return true;
 	}
-	nodo->setUp(aux2->getUp());
-	aux2->setUp(nodo);
-	return true;
 }
-*/
 
 
 Nodo* Mpp::buscar(string rut)
@@ -81,32 +74,6 @@ Nodo* Mpp::buscar(string rut)
 		}
 	}
 }
-
-void Mpp::agregar(Alumno* alumno, int paralelo, int numLista)
-{
-	Nodo* nodo = new Nodo(alumno, fila, columna);
-
-	Nodo* aux = &AROW[fila];
-	while (aux->getLeft()->getColumna() > 0 && aux->getLeft()->getColumna() > columna)
-	{
-		if (aux->getLeft()->getColumna == columna) { //ya esta ocupado
-			return;
-		}
-		aux = aux->getLeft();
-	}
-	nodo->setLeft(aux->getLeft());
-	aux->setLeft(nodo);
-
-	Nodo* aux2 = &ACOL[columna];
-	while (aux2->getUp()->getFila() > 0 && aux2->getUp()->getFila() > fila)
-	{
-		aux2 = aux2->getUp();
-	}
-	nodo->setUp(aux2->getUp());
-	aux2->setUp(nodo);
-}
-
-
 
 int Mpp::getAncho() {return this->ancho;}
 
