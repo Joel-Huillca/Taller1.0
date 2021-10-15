@@ -26,12 +26,61 @@ void SistemaNotas::registrarNota()
 		getline(cin, notaAux);
 		try {
 			notaPruebaRec = stof(notaAux);
-		} catch (const std::exception&) {
+		} catch (const std::exception) {
 			cout << "Favor de ingresar correctamente\n";
+			registrarNota();
 		}
+		if (notaPruebaRec > 7.0 || notaPruebaRec < 1.0)
+		{
+			cout << "La nota ingresada no es valida" << endl;
+		}
+		cout << "¿Que nota desea cambiar?. Ingrese [1] [2] o [3] dependiendo de la nota" << endl;
+		string notaAcambiarAux;
+		int notaAcambiar;
+		getline(cin, notaAcambiarAux);
+		try
+		{
+			notaAcambiar = stoi(notaAcambiarAux);
+		}
+		catch (const std::expection)
+		{
+			cout << "No es valido" << endl;
+			registrarNota();
+		}
+		if (notaAcambiar != 1 && notaAcambiar != 2 && notaAcambiar != 3)
+		{
+			cout << "No es valido" << endl;
+		}
+		if (notaAcambiar == 1)
+		{
+			if (rutAux->getAlumno()->getNotaUno() == 1.0)
+			{
+				rutAux->getAlumno()->setNotaUno(notaPruebaRec);
+			}
+			cout << "La nota a cambiar no cumple con los requisitos" << endl;
 
+		}
+		if (notaAcambiar == 2)
+		{
+			if (rutAux->getAlumno()->getNotaDos() == 1.0)
+			{
+				rutAux->getAlumno()->setNotaDos(notaPruebaRec);
+			}
+			cout << "La nota a cambiar no cumple con los requisitos" << endl;
 
+		}
+		if (notaAcambiar == 3)
+		{
+			if (rutAux->getAlumno()->getNotaTres() == 1.0)
+			{
+				rutAux->getAlumno()->setNotaTres(notaPruebaRec);
+			}
+			cout << "La nota a cambiar no cumple con los requisitos" << endl;
+
+		}
+		menuPrincipal();
 	}
+	cout << "el rut ingresado no es valido" << endl;
 }
 
 void SistemaNotas::menuIniciarSesion()
