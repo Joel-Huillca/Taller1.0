@@ -40,98 +40,39 @@ void SistemaNotas::menuPrincipal()
 		cout << "[1] Cargar archivos\n[2] Registrar Notas\n[3] Estadisticas\n[4] Elminar Estudiantes R.\n[5] Salir\n";
 		string texto1 = "> Elija una opcion:";
 		int opcion1 = recibirDato(texto1);
-<<<<<<< HEAD
-<<<<<<< HEAD
 		switch (opcion1)
 		{
 		case 1:
-		{
-			leerArchivo();
-=======
-=======
->>>>>>> 4bf214a60c59ac632a4126225bf82b81d17e2808
-		switch (opcion1) {
-		
-		case 1: {
-
-			if (lecturaArch == false)
-			{
-				leerArchivo();
-				lecturaArch = true;
-			}
-			else {
-				cout << "Ya tiene cargada la informacion al sistema \n\n";
-			}
-<<<<<<< HEAD
->>>>>>> 84311775a049a94c415e0805343b4fc0a8284e54
-=======
->>>>>>> 4bf214a60c59ac632a4126225bf82b81d17e2808
-		}
+		{}
 		break;
 
 		case 2:
-		{
-			if (lecturaArch == true)
-			{
-				cout << "2222222222222\n";
-			}
-			else
-			{
-<<<<<<< HEAD
-				cout << "Favor de '[1] Cargar archivos'\n";
-=======
-				cout << "Favor de '[1] Cargar archivos'\n\n";
->>>>>>> 4bf214a60c59ac632a4126225bf82b81d17e2808
-			}
-
-		}
+		{}
 		break;
 		case 3:
 		{
-			if (lecturaArch == true)
+			cout << "          |ESTADISTICAS|"<<endl;
+			cout << "[1] Cantidad de estudiantes que esten reprobando el Taller por paralelo"<<endl;
+			cout << "[2] % Total de estudiantes que estan reprobando el Curso" << endl;
+			cout << "[3] Promedio final de catedras por cada estudiante " << endl;
+			string texto2 = "> Elija una opcion:";
+			int opcion2 = recibirDato(texto2);
+			switch (opcion2)
 			{
-				cout << "          |ESTADISTICAS|" << endl;
-				cout << "[1] Cantidad de estudiantes que esten reprobando el Taller por paralelo" << endl;
-				cout << "[2] % Total de estudiantes que estan reprobando el Curso" << endl;
-				cout << "[3] Promedio final de catedras por cada estudiante " << endl;
-				string texto2 = "> Elija una opcion:";
-				int opcion2 = recibirDato(texto2);
-				switch (opcion2)
-				{
-				case 1:
-<<<<<<< HEAD
-				{cout << "11111111111111"; }
-				break;
-				case 2:
-				{cout << "222222222222"; }
-				break;
-				case 3:
-				{cout << "333333333333"; }
-				break;
-=======
-				{cout << "11111111111111\n"; }
-				break;
-				case 2:
-				{cout << "222222222222\n"; }
-				break;
-				case 3:
-				{cout << "333333333333\n"; }
-				break;
->>>>>>> 4bf214a60c59ac632a4126225bf82b81d17e2808
+			case 1:
+			{cout << "11111111111111";}
+			break;
+			case 2:
+			{cout << "222222222222"; }
+			break; 
+			case 3:
+			{cout << "333333333333"; }
+			break;
 
-				default:
-					cout << "La opcion ingresada no es valida, intente de nuevo...\n" << endl;
-					break;
-				}//Fin del menu_2
-			}
-			else
-			{
-<<<<<<< HEAD
-				cout << "Favor de '[1] Cargar archivos'\n";
-=======
-				cout << "Favor de '[1] Cargar archivos'\n\n";
->>>>>>> 4bf214a60c59ac632a4126225bf82b81d17e2808
-			}
+			default:
+				cout << "La opcion ingresada no es valida, intente de nuevo...\n" << endl;
+				break;
+			}//Fin del menu_2
 
 		}
 		break;
