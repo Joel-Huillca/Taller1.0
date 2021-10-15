@@ -85,10 +85,13 @@ void SistemaNotas::registrarNota()
 
 void SistemaNotas::cantEstudiantes_R()
 {
+	//int contRT = mpp->buscarReprobadosT();
+	//cout << "Los reprobados son: " << contRT << endl;
 }
 
 void SistemaNotas::porcertanjeEstudiante_R()
 {
+	
 }
 
 void SistemaNotas::promedioFinal_C()
@@ -131,8 +134,6 @@ void SistemaNotas::menuIniciarSesion()
 void SistemaNotas::menuPrincipal()
 {
 	bool lecturaArch = false;
-
-
 	cout << "_____.:Bienvenido:._____\n" << endl;
 	menuIniciarSesion();
 	bool salir = false;
@@ -184,7 +185,10 @@ void SistemaNotas::menuPrincipal()
 				{
 				case 1:
 				{cout << "11111111111111\n";
-					//int cantEstR = cantEstudiantes_R();
+				int contRT = mpp->buscarReprobadosT();
+				
+
+				//cantEstudiantes_R();
 				}
 				break;
 				case 2:
@@ -231,11 +235,12 @@ void SistemaNotas::menuPrincipal()
 
 void SistemaNotas::leerArchivo()
 {
+	
+
 	ifstream archivo("estudiantes.txt");
 	string linea = "";
 
 	while (getline(archivo, linea)) {
-		
 		string nombre;
 		string rut;
 		string notaUnoAux;
@@ -275,6 +280,7 @@ void SistemaNotas::leerArchivo()
 
 		if (apruebaTallerAux == "verdadero"){
 			apruebaTaller = true;
+			
 		}
 		else {
 			apruebaTaller = false;
