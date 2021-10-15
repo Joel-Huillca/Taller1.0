@@ -5,11 +5,6 @@
 #include "Nodo.h"
 #include "Alumno.h"
 
-
-#include "Mpp.h"
-#include "Nodo.h"
-#include "Alumno.h"
-
 #include <algorithm>
 
 #include <iostream>
@@ -22,6 +17,12 @@ using namespace std;
 
 class SistemaNotas
 {
+private:
+	int ancho = 9;
+	int largo = 26;
+	Mpp* mpp = new Mpp(ancho,largo);
+	bool leerArch = false;
+
 public:
 	SistemaNotas();
 
