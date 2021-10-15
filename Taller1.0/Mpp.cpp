@@ -23,15 +23,54 @@ Mpp::Mpp(int ancho, int largo)
 	}
 }
 
-void Mpp::agregar(Alumno* alumno, int columna, int fila)
-{
-	Nodo* nodo = new Nodo(alumno, columna, fila);
+bool Mpp::agregar(Alumno* alumno, int columna, int fila)
+{//Los axiliares se ocupan para moverse 
 
+	//Buscar por fila
+	Nodo* nodo = new Nodo(alumno, columna, fila);
+	Nodo* aux = &AROW[fila];
+	Nodo* buscarAlumno = buscar(nodo->getAlumno()->getRut());
+
+	if (buscarAlumno != nullptr){
+		return false;
+	}else{
+		while (aux->getLeft()->getColumna()>0      &&      aux->getLeft()->getColumna()>columna) {
+			if (aux->getLeft()->getColumna() == columna)
+			{
+				return false;
+			}
+
+			aux = aux->getLeft();
+		}
+	}
+	nodo->setLeft(aux->getLeft());
+	aux->setLeft(nodo);
+
+	//Buscar por Columna
+	Nodo* aux2 = &ACOL[columna];
+
+	while (aux2->getUp()->getFila() > 0 && aux2->getUp()->getFila() > columna) 
+	{
+		aux2 = aux2->getUp();
+	}
+	nodo->setUp(aux2->getUp());
+	aux2->setUp(nodo);
+	return true;
 }
+
 
 Nodo* Mpp::buscar(string rut)
 {
-	return nullptr;
+	for (int i = 1 ; i <= ancho; i++)
+	{
+		Nodo* aux = ACOL[i].getUp();
+		while (aux->getFila() > 0) {
+			if (aux->getAlumno()->getRut()._Equal(rut) ){
+				return aux;
+			}
+			aux = aux->getUp();
+		}
+	}
 }
 
 

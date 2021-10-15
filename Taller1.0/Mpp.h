@@ -20,8 +20,9 @@ public:
 	Mpp();
 	Mpp(int ancho, int largo);
 
+
 	//metodos
-	void agregar(Alumno* alumno, int columna, int fila);
+	bool agregar(Alumno* alumno, int columna, int fila);
 	Nodo* buscar(string rut);
 	
 
