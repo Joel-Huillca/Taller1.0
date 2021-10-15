@@ -26,6 +26,9 @@ public:
 
 	~SistemaNotas();
 
+	void registrarNota();
+
+
 	void menuIniciarSesion();
 
 	void menuPrincipal();
