@@ -34,8 +34,6 @@ public:
 	void setAncho(int ancho);
 	void setLargo(int largo);
 
-
-
 	//destructor
 	~Mpp();
 

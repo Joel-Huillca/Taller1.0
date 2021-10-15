@@ -41,12 +41,15 @@ void SistemaNotas::menuPrincipal()
 		string texto1 = "> Elija una opcion:";
 		int opcion1 = recibirDato(texto1);
 <<<<<<< HEAD
+<<<<<<< HEAD
 		switch (opcion1)
 		{
 		case 1:
 		{
 			leerArchivo();
 =======
+=======
+>>>>>>> 4bf214a60c59ac632a4126225bf82b81d17e2808
 		switch (opcion1) {
 		
 		case 1: {
@@ -59,7 +62,10 @@ void SistemaNotas::menuPrincipal()
 			else {
 				cout << "Ya tiene cargada la informacion al sistema \n\n";
 			}
+<<<<<<< HEAD
 >>>>>>> 84311775a049a94c415e0805343b4fc0a8284e54
+=======
+>>>>>>> 4bf214a60c59ac632a4126225bf82b81d17e2808
 		}
 		break;
 
@@ -71,7 +77,11 @@ void SistemaNotas::menuPrincipal()
 			}
 			else
 			{
+<<<<<<< HEAD
 				cout << "Favor de '[1] Cargar archivos'\n";
+=======
+				cout << "Favor de '[1] Cargar archivos'\n\n";
+>>>>>>> 4bf214a60c59ac632a4126225bf82b81d17e2808
 			}
 
 		}
@@ -89,6 +99,7 @@ void SistemaNotas::menuPrincipal()
 				switch (opcion2)
 				{
 				case 1:
+<<<<<<< HEAD
 				{cout << "11111111111111"; }
 				break;
 				case 2:
@@ -97,6 +108,16 @@ void SistemaNotas::menuPrincipal()
 				case 3:
 				{cout << "333333333333"; }
 				break;
+=======
+				{cout << "11111111111111\n"; }
+				break;
+				case 2:
+				{cout << "222222222222\n"; }
+				break;
+				case 3:
+				{cout << "333333333333\n"; }
+				break;
+>>>>>>> 4bf214a60c59ac632a4126225bf82b81d17e2808
 
 				default:
 					cout << "La opcion ingresada no es valida, intente de nuevo...\n" << endl;
@@ -105,7 +126,11 @@ void SistemaNotas::menuPrincipal()
 			}
 			else
 			{
+<<<<<<< HEAD
 				cout << "Favor de '[1] Cargar archivos'\n";
+=======
+				cout << "Favor de '[1] Cargar archivos'\n\n";
+>>>>>>> 4bf214a60c59ac632a4126225bf82b81d17e2808
 			}
 
 		}
@@ -126,7 +151,6 @@ void SistemaNotas::menuPrincipal()
 			cout <<"La opcion ingresada no es valida, intente de nuevo...\n" << endl;
 			break;
 		}//fin del Menu
-		
 
 	}
 
