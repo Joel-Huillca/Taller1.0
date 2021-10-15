@@ -74,26 +74,37 @@ Nodo* Mpp::buscar(string rut)
 		}
 	}
 }
-
-void Mpp::buscarReprobadosT()
+/* 
+int Mpp::buscarReprobadosT()
 {
-	/*
-	int cont = 0;
-	for (int i = 1; i <= ancho; i++)
+
+	int contFalso = 0;
+	int contVerdadero = 0;
+	for (int i = 1; i <=9; i++)
 	{
 		Nodo* aux = ACOL[i].getUp();
+		string nombre  = aux->getAlumno()->getNombre();
+		cout << nombre << endl;
 		while (aux->getFila() > 0) {
-			if (aux->getAlumno()->getApruebaTaller()._Equal("verdadero")) {
-				cont++;
+
+			if (aux->getAlumno()->getApruebaTaller() == true) {
+				
+				contFalso++;
+			}
+			else {
+				contVerdadero++;
 			}
 			aux = aux->getUp();
 		}
 	}
-	//return cont;
+	cout << "Los reprobados son: " << " " << endl;
+	cout << contFalso<<endl;
+	cout << contVerdadero <<endl;
 
-	*/
+	return contVerdadero;
+
 }
-
+*/
 
 
 

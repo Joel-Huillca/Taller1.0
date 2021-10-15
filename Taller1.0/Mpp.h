@@ -25,7 +25,7 @@ public:
 	bool agregar(Alumno* alumno, int columna, int fila);
 	Nodo* buscar(string rut);
 	
-	void buscarReprobadosT();
+	int buscarReprobadosT();
 
 
 	//gets y sets
