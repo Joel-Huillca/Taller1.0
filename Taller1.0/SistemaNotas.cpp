@@ -34,7 +34,7 @@ void SistemaNotas::registrarNota()
 		{
 			cout << "La nota ingresada no es valida" << endl;
 		}
-		cout << "¿Que nota desea cambiar?. Ingrese [1] [2] o [3] dependiendo de la nota" << endl;
+		cout << "Selecione la nota a cambiar: \n[1] Catedra1\n[2] Catedra2\n[3] Catedra3" << endl;
 		string notaAcambiarAux;
 		int notaAcambiar;
 		getline(cin, notaAcambiarAux);
@@ -57,7 +57,7 @@ void SistemaNotas::registrarNota()
 			}
 			cout << "La nota a cambiar no cumple con los requisitos" << endl;
 		}
-		case 2:
+		case 2: 
 		{
 			if (rutAux->getAlumno()->getNotaDos() == 1.0)
 			{
@@ -185,7 +185,7 @@ void SistemaNotas::menuPrincipal()
 				{
 				case 1:
 				{cout << "11111111111111\n";
-				int contRT = mpp->buscarReprobadosT();
+				//int contRT = mpp->buscarReprobadosT();
 				
 
 				//cantEstudiantes_R();
