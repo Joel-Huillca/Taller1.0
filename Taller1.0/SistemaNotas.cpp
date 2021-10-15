@@ -47,36 +47,36 @@ void SistemaNotas::registrarNota()
 			cout << "No es valido" << endl;
 			registrarNota();
 		}
-		if (notaAcambiar != 1 && notaAcambiar != 2 && notaAcambiar != 3)
+		switch (notaAcambiar)
 		{
-			cout << "No es valido" << endl;
-		}
-		if (notaAcambiar == 1)
+		case 1:
 		{
 			if (rutAux->getAlumno()->getNotaUno() == 1.0)
 			{
 				rutAux->getAlumno()->setNotaUno(notaPruebaRec);
 			}
 			cout << "La nota a cambiar no cumple con los requisitos" << endl;
-
 		}
-		if (notaAcambiar == 2)
+		case 2:
 		{
 			if (rutAux->getAlumno()->getNotaDos() == 1.0)
 			{
 				rutAux->getAlumno()->setNotaDos(notaPruebaRec);
 			}
 			cout << "La nota a cambiar no cumple con los requisitos" << endl;
-
 		}
-		if (notaAcambiar == 3)
+		case 3:
 		{
 			if (rutAux->getAlumno()->getNotaTres() == 1.0)
 			{
 				rutAux->getAlumno()->setNotaTres(notaPruebaRec);
 			}
 			cout << "La nota a cambiar no cumple con los requisitos" << endl;
+		}
 
+		default:
+			cout << "No es valido" << endl;
+			break;
 		}
 		menuPrincipal();
 	}
