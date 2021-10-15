@@ -75,6 +75,29 @@ Nodo* Mpp::buscar(string rut)
 	}
 }
 
+void Mpp::buscarReprobadosT()
+{
+	/*
+	int cont = 0;
+	for (int i = 1; i <= ancho; i++)
+	{
+		Nodo* aux = ACOL[i].getUp();
+		while (aux->getFila() > 0) {
+			if (aux->getAlumno()->getApruebaTaller()._Equal("verdadero")) {
+				cont++;
+			}
+			aux = aux->getUp();
+		}
+	}
+	//return cont;
+
+	*/
+}
+
+
+
+
+
 int Mpp::getAncho() {return this->ancho;}
 
 int Mpp::getLargo(){return this->largo;}

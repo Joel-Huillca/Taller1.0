@@ -17,6 +17,9 @@ void SistemaNotas::registrarNota()
 
 void SistemaNotas::cantEstudiantes_R()
 {
+	//Nodo estudRTAux = mpp->buscar();
+
+
 }
 
 void SistemaNotas::porcertanjeEstudiante_R()
@@ -139,7 +142,9 @@ void SistemaNotas::menuPrincipal()
 
 
 		case 4:
-		{}
+		{
+			filtarMatriz();
+		}
 		break;
 
 		case 5:
