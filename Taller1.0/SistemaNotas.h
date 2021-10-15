@@ -20,7 +20,9 @@ private:
 	int ancho = 9;
 	int largo = 26;
 	Mpp* mpp = new Mpp(ancho, largo);
-	bool leerArch = false;
+	//bool leerArch = false;
+
+
 public:
 	SistemaNotas();
 
