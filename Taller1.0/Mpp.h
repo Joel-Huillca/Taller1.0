@@ -13,7 +13,7 @@ private:
 	int filaAct; //Fila actual 
 
 	Nodo* ACOL; //Vector de Nodos Columnas
-	Nodo* AROW; //Vectoe de Nodos Filas
+	Nodo* AROW; //Vector de Nodos Filas
 
 public:
 	//Constructores

@@ -40,7 +40,9 @@ void SistemaNotas::menuPrincipal()
 		switch (opcion1)
 		{
 		case 1:
-		{}
+		{
+			leerArchivo();
+		}
 		break;
 		case 2:
 		{}
@@ -201,6 +203,19 @@ void SistemaNotas::leerArchivo()
 		}
 
 	}
-
+	leerArch = true;
 	archivo.close();
+	//imprimir
+	for (int i = 1; i <= largo; i++) {
+		string fila;
+		Nodo* aux = AROW[i].getLeft();
+		int espacios = ancho - aux->getColumna();
+		while (true)
+		{
+			for (int j = 0; j < espacios; j++) {
+				fila = "0" + fila;
+			}
+			if(aux->getColumna() == 0 )
+		}
+	}
 }
