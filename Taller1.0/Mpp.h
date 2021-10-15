@@ -22,7 +22,8 @@ public:
 
 
 	//metodos
-	bool agregar(Alumno* alumno, int columna, int fila);
+	//bool agregar(Alumno* alumno, int columna, int fila);
+	void agregar(Alumno* alumno, int paralelo, int numLista);
 	Nodo* buscar(string rut);
 	
 
