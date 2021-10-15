@@ -4,6 +4,7 @@
 using namespace std;
 SistemaNotas::SistemaNotas()
 {
+	leerArchivo();
 }
 
 SistemaNotas::~SistemaNotas()
@@ -178,6 +179,8 @@ void SistemaNotas::leerArchivo()
 		notaUno = stoi(notaUnoAux);
 		notaDos = stoi(notaDosAux);
 		notaTres = stoi(notaTresAux);
+		paralelo = stoi(paraleloAux);
+		numLista = stoi(numListaAux);
 
 		transform(nombre.begin(), nombre.end(), nombre.begin(), :: toupper);
 
@@ -190,8 +193,9 @@ void SistemaNotas::leerArchivo()
 		
 		Alumno* alumno = new Alumno(nombre, rut, notaUno, notaDos, notaTres, apruebaTaller, paralelo, numLista);
 		
-		bool agregar = this->mpp->agregar(alumno,paralelo,numLista);
-		if (agregar = true)
+		
+		bool resp = this->mpp->agregar(alumno,paralelo,numLista);
+		if (resp = true)
 		{
 			cout << alumno->getNombre() << endl;
 		}
