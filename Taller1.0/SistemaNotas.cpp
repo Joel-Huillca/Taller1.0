@@ -12,8 +12,9 @@ SistemaNotas::~SistemaNotas()
 
 void SistemaNotas::registrarNota()
 {
-
-}
+	cout << "Favor de ingresar el RUT: ";
+	string rut;
+	getline(cin, rut);
 
 	Nodo* rutAux = mpp->buscar(rut);
 	if (rutAux != nullptr)
@@ -24,7 +25,8 @@ void SistemaNotas::registrarNota()
 		getline(cin, notaAux);
 		try {
 			notaPruebaRec = stof(notaAux);
-		} catch (const std::exception) {
+		}
+		catch (const std::exception) {
 			cout << "Favor de ingresar correctamente\n";
 			registrarNota();
 		}
@@ -40,7 +42,7 @@ void SistemaNotas::registrarNota()
 		{
 			notaAcambiar = stoi(notaAcambiarAux);
 		}
-		catch (const std::expection)
+		catch (const std::exception)
 		{
 			cout << "No es valido" << endl;
 			registrarNota();
@@ -57,9 +59,46 @@ void SistemaNotas::registrarNota()
 			}
 			cout << "La nota a cambiar no cumple con los requisitos" << endl;
 
+		}
+		if (notaAcambiar == 2)
+		{
+			if (rutAux->getAlumno()->getNotaDos() == 1.0)
+			{
+				rutAux->getAlumno()->setNotaDos(notaPruebaRec);
+			}
+			cout << "La nota a cambiar no cumple con los requisitos" << endl;
 
+		}
+		if (notaAcambiar == 3)
+		{
+			if (rutAux->getAlumno()->getNotaTres() == 1.0)
+			{
+				rutAux->getAlumno()->setNotaTres(notaPruebaRec);
+			}
+			cout << "La nota a cambiar no cumple con los requisitos" << endl;
+
+		}
+		menuPrincipal();
 	}
+	cout << "el rut ingresado no es valido" << endl;
 }
+
+void SistemaNotas::cantEstudiantes_R()
+{
+}
+
+void SistemaNotas::porcertanjeEstudiante_R()
+{
+}
+
+void SistemaNotas::promedioFinal_C()
+{
+}
+
+void SistemaNotas::filtarMatriz()
+{
+}
+
 
 void SistemaNotas::menuIniciarSesion()
 {
@@ -116,6 +155,7 @@ void SistemaNotas::menuPrincipal()
 			}
 		}
 		break;
+
 
 		case 2:
 		{
