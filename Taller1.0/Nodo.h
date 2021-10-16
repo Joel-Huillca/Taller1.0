@@ -16,6 +16,7 @@ public:
 
 	//gets y sets
 	Nodo* getUp();
+	
 	Nodo* getLeft();
 	Alumno* getAlumno();
 	int getFila();
