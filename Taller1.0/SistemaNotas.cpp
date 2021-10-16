@@ -2,15 +2,22 @@
 #include "SistemaNotas.h"
 #include <string>
 using namespace std;
+/*
+Constructor de la clase SistemaNotas
+*/
 SistemaNotas::SistemaNotas()
 {
 }
-
+/*
+Destructor de la clase SistemaNotas
+*/
 SistemaNotas::~SistemaNotas()
 {
 }
 
-
+/*
+Se registra la nota de la prueba recuperativa y se cambia por cualquiera de las 3 notas de catedra siempre y cuando estas hayan sido un 1.0
+*/
 void SistemaNotas::registrarNota()
 {
 	cout << "Favor de ingresar el RUT: ";
@@ -84,32 +91,44 @@ void SistemaNotas::registrarNota()
 	cout << "el rut ingresado no es valido" << endl;
 }
 
+/*
+Cantidad de estudiantes reprobados
+*/
 void SistemaNotas::cantEstudiantes_R()
 {
 	//int contRT = mpp->buscarReprobadosT();
 	//cout << "Los reprobados son: " << contRT << endl;
 }
 
+/*
+Porcentaje de estudiantes reprobados (se considera los que deben rendir examen)
+*/
 void SistemaNotas::porcertanjeEstudiante_R()
 {
 	
 }
 
+/*
+Promedio final de las catedras para los estudiantes registrados
+*/
 void SistemaNotas::promedioFinal_C()
 {
 }
 
+/*
+Filtra la matriz eliminando a los estudiantes que hayan reprobado por taller
+*/
 void SistemaNotas::filtarMatriz()
 {
 }
 
-
+/*
+Menu para iniciar sesion la cual pide nombre y codigo
+*/
 void SistemaNotas::menuIniciarSesion()
 {
 	//Alumno* alumno = new Alumno(nombre, rut, notaUno, notaDos, notaTres, apruebaTaller, paralelo, numLista);
 	//cout << alumno->getNombre() << " " << alumno->getRut()<< endl; //comprobacion de lectura
-
-
 
 	string nombre;
 	cout << "Nombre: ";
@@ -132,6 +151,10 @@ void SistemaNotas::menuIniciarSesion()
 		cout << "**Contraseña incorrecta**\n\n";
 }
 
+
+/*
+Menu principal con todas las funcionalidades
+*/
 void SistemaNotas::menuPrincipal()
 {
 	bool lecturaArch = false;
@@ -223,6 +246,7 @@ void SistemaNotas::menuPrincipal()
 		{
 			salir = true;
 			cout << "___El sistema a finalizado___\n  Que tenga un excelente dia"<<endl;
+			salirSistema();
 		}
 		break;
 		default:
@@ -234,6 +258,9 @@ void SistemaNotas::menuPrincipal()
 	}
 }
 
+/*
+Lee el archivo de texto como una matriz poco poblada
+*/
 void SistemaNotas::leerArchivo()
 {
 	
@@ -300,8 +327,18 @@ void SistemaNotas::leerArchivo()
 
 	archivo.close();
 	
-}// Lectura de arch
+}
+/*
+Finaliza la ejecucion del sistema
+*/
+void SistemaNotas::salirSistema()
+{
 
+}
+
+/*
+Comprueba la entrada de datos
+*/
 bool SistemaNotas::comprobarEntradaDatosInt(string dato)
 {
 	int inicio = 0;
@@ -325,6 +362,9 @@ bool SistemaNotas::comprobarEntradaDatosInt(string dato)
 	return true;
 }
 
+/*
+Verifica si la opcion ingresada es correcto para el Menu
+*/
 int SistemaNotas::recibirDato(string texto)
 {
 	string dato; 

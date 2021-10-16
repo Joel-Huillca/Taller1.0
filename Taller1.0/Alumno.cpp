@@ -1,9 +1,21 @@
 #include "Alumno.h"
-
+/*
+ Constructor vacio de la clase Alumno
+*/
 Alumno::Alumno()
 {
 }
-
+/*
+ Constructor de la clase Alumno
+@param nombre - Nombre del Alumno
+@param rut - Rut del Alumno
+@param notaUno - Nota uno del Alumno
+@param notaDos - Nota dos del Alumno
+@param notaTres - Nota tres del Alumno
+@param apruebaTaller - Booleano si el alumno aprueba el taller
+@param paralelo - paralelo del Alumno
+@param numLista - numero de lista del Alumno
+*/
 Alumno::Alumno(string nombre, string rut, float notaUno, float notaDos, float notaTres, bool apruebaTaller, int paralelo, int numLista)
 {
 	this->nombre = nombre;
@@ -15,7 +27,9 @@ Alumno::Alumno(string nombre, string rut, float notaUno, float notaDos, float no
 	this->paralelo = paralelo;
 	this->numLista = numLista;
 }
-
+/*
+Gets de la clase Alumno
+*/
 string Alumno::getNombre()
 {
 	return this->nombre;
@@ -56,6 +70,10 @@ int Alumno::getNumLista()
 {
 	return this->numLista;
 }
+/*
+Set's de la clase Alumno
+@param notaPruebaRec - Nota de la prueba recuperativa
+*/
 
 float Alumno::setNotaUno(float notaPruebaRec)
 {
