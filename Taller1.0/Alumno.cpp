@@ -46,6 +46,7 @@ bool Alumno::getApruebaTaller()
 	return this->apruebaTaller;
 }
 
+
 int Alumno::getParalelo()
 {
 	return this->paralelo;

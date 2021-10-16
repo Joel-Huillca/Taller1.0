@@ -10,6 +10,7 @@ SistemaNotas::~SistemaNotas()
 {
 }
 
+
 void SistemaNotas::registrarNota()
 {
 	cout << "Favor de ingresar el RUT: ";
