@@ -1,9 +1,16 @@
 #include "Mpp.h"
 
+/*
+Constructor vacio de la clase Mpp
+*/
 Mpp::Mpp()
 {
 }
-
+/*
+Constructor de la clase Mpp
+@param ancho - Valor que se le asigna al ancho de la matriz
+@paramn largo - Valor que se la asigna al largo de la matriz
+*/
 Mpp::Mpp(int ancho, int largo)
 {
 	this->ancho = ancho; //Tenemos 8 atributos de la txt y comienza en pos. 1
@@ -22,7 +29,12 @@ Mpp::Mpp(int ancho, int largo)
 		AROW[j].setColumna(0);
 	}
 }
-
+/*
+Se agrega un alumno a la matriz
+@param alumno - Es el tipo de dato que se agrega a la matriz, en este caso de la clase Alumno
+@param columna - Valor de la columna que le corresponde
+@param fila - Valor de la fila que le corresponde
+*/
 bool Mpp::agregar(Alumno* alumno, int columna, int fila)
 {	//Los axiliares se ocupan para moverse 
 
@@ -60,6 +72,10 @@ bool Mpp::agregar(Alumno* alumno, int columna, int fila)
 	}
 }
 
+/*
+Se busca por rut del alumno
+@param rut - Variable que corresponde al rut del alumno
+*/
 
 Nodo* Mpp::buscar(string rut)
 {
@@ -74,7 +90,9 @@ Nodo* Mpp::buscar(string rut)
 		}
 	}
 }
-/* 
+/*
+Se buscan los Reprobados por Taller
+
 int Mpp::buscarReprobadosT()
 {
 
@@ -105,22 +123,24 @@ int Mpp::buscarReprobadosT()
 
 }
 */
-
-
-
+/*
+Get's de la clase Mpp
+*/
 
 int Mpp::getAncho() {return this->ancho;}
-
 int Mpp::getLargo(){return this->largo;}
 
+/*
+Set's de la Clase Mpp
+@param ancho - Variable que corresponde al ancho de la matriz
+@param largo - Variable que corresponde al largo de la matriz
+*/
 void Mpp::setAncho(int ancho){this->ancho = ancho;}
-
 void Mpp::setLargo(int largo){this->largo = largo;}
 
-
-
-
-
+/*
+Desructor de la clase Mpp
+*/
 Mpp::~Mpp()
 {
 }
